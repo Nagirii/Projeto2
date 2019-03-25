@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
         } else if(inputX < 0){
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
+
+        
     }
     void FixedUpdate()
     {
@@ -43,4 +45,13 @@ public class Player : MonoBehaviour
         //moving the player on the Y axis
         rb.velocity = new Vector2(rb.velocity.x, inputY * speed);
     }
+    
+    //player colliding with coin
+    void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.CompareTag("Coin")){
+            SFXManager.instance.ShowCoinParticles(other.gameObject);
+            Destroy(other.gameObject);
+        }
+    }
 }
+
