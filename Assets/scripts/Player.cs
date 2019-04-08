@@ -20,13 +20,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
 
     private void Update(){
-        //Changing directions on player character
-        if (inputX > 0){
-            transform.eulerAngles = new Vector3(0, 0, 0);
-        } else if(inputX < 0){
-            transform.eulerAngles = new Vector3(0, 180, 0);
-        }
-
         
     }
     void FixedUpdate()
@@ -50,6 +43,7 @@ public class Player : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Coin")){
             SFXManager.instance.ShowCoinParticles(other.gameObject);
+            AudioManager.instance.PlaySoundCoinPickup(other.gameObject);
             Destroy(other.gameObject);
         }
     }

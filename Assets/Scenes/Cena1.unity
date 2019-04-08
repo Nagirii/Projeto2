@@ -184,6 +184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 145490402}
+  - component: {fileID: 145490403}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -205,6 +206,20 @@ Transform:
   m_Father: {fileID: 1232263508}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &145490403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145490401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb35e69c73f148449b8ba5fd79aebbd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSFX:
+    coinPickup: {fileID: 8300000, guid: 09e243add7eba66459c72787b0d30b49, type: 3}
 --- !u!1001 &185972166
 PrefabInstance:
   m_ObjectHideFlags: 0
