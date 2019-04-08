@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+   
     public float speed;
     private float inputX;
     private float inputY;
@@ -45,6 +46,7 @@ public class Player : MonoBehaviour
             SFXManager.instance.ShowCoinParticles(other.gameObject);
             AudioManager.instance.PlaySoundCoinPickup(other.gameObject);
             Destroy(other.gameObject);
+            SceneManager.instance.IncrementCoinCount();
         }
     }
 }
