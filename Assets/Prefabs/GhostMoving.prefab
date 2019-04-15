@@ -111,6 +111,23 @@ MonoBehaviour:
   pos2: {fileID: 435216856855553425}
   waitTime: 0.5
   speed: 2
+--- !u!114 &1898573719407202892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3717896463557540827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b8399da6770ee4f83318280ed659a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
+  spawnPoint: {fileID: 0}
+  waitTime: 2
+  projectileSpeed: 3
+  directions: []
 --- !u!1001 &435216856938005529
 PrefabInstance:
   m_ObjectHideFlags: 0

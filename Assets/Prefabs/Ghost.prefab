@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 3860337282826010573}
   - component: {fileID: 3860337282826010572}
   - component: {fileID: 3860337282826010563}
+  - component: {fileID: 6530397686639068505}
   - component: {fileID: 8506907056509919288}
   m_Layer: 10
-  m_Name: frame_00012
+  m_Name: Ghost
   m_TagString: Ghost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,6 +101,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6530397686639068505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3860337282826010562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b8399da6770ee4f83318280ed659a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
+  spawnPoint: {fileID: 0}
+  waitTime: 2
+  projectileSpeed: 3
+  directions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!70 &8506907056509919288
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
