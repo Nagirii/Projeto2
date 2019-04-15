@@ -202,7 +202,7 @@ RectTransform:
   m_GameObject: {fileID: 92983051}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.62267447, y: 0.62267447, z: 0.62267447}
+  m_LocalScale: {x: 0.68494195, y: 0.68494195, z: 0.68494195}
   m_Children:
   - {fileID: 458664915}
   - {fileID: 258071879}
@@ -210,10 +210,10 @@ RectTransform:
   m_Father: {fileID: 224805070}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -156, y: 247.11}
-  m_SizeDelta: {x: 0, y: -540.5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 440, y: -63}
+  m_SizeDelta: {x: 1280, y: 179.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &92983053
 MonoBehaviour:
@@ -1201,7 +1201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954294395}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.74, y: 0, z: -10}
+  m_LocalPosition: {x: 0.07, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 815868960}
@@ -1684,7 +1684,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1232263506}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfff3cf40b7bf4346952fa5ba9c2dfcb, type: 3}
+  m_Script: {fileID: 11500000, guid: f24761d718bd6f64b8a58bd19c37d70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Tape: {fileID: 695498569}
@@ -2351,7 +2351,7 @@ Tilemap:
   - first: {x: 10, y: -5, z: 0}
     second:
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -2552,10 +2552,10 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 18
     m_Data: {fileID: 21300000, guid: 800a35517177b534d874fd88bb640bc9, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: b2ee58b70e195c24a97f6f5cfd812624, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: b2ee58b70e195c24a97f6f5cfd812624, type: 3}
   - m_RefCount: 10
     m_Data: {fileID: 21300000, guid: 8d1d3c112d5687b4688b8e77ed47fe53, type: 3}
   - m_RefCount: 3
