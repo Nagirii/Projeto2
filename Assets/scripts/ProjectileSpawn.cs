@@ -16,6 +16,7 @@ public class ProjectileSpawn : MonoBehaviour
     void Start()
     {
         parent = GameObject.Find("Tape");
+        StartCoroutine(Spawn());
     }
 
     IEnumerator Spawn(){ 
