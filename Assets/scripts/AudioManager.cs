@@ -21,4 +21,8 @@ public class AudioManager : MonoBehaviour
    public void PlaySoundHealthLoss(GameObject obj) {
        AudioSource.PlayClipAtPoint(audioSFX.oof, obj.transform.position);
    }
+
+   public void PlaySoundComplete(GameObject obj) {
+       AudioSource.PlayClipAtPoint(audioSFX.Complete, obj.transform.position);
+   }
 }

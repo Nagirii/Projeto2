@@ -8,4 +8,5 @@ public class AudioSFX
 {
     public AudioClip coinPickup;
     public AudioClip oof;
+    public AudioClip Complete;
 }

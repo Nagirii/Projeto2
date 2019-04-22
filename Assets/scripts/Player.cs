@@ -45,7 +45,18 @@ public class Player : MonoBehaviour
         rb.velocity = new Vector2(rb.velocity.x, inputY * speed);
     }
     
-    //player colliding with coin
+    
+        void KillPlayer(){
+            AudioManager.instance.PlaySoundHealthLoss(gameObject);
+                SFXManager.instance.ShowDieParticles(gameObject);
+                Destroy(gameObject);
+        }
+        void StopTapeAndMusic(){ 
+             Camera.main.GetComponentInChildren<AudioSource>().mute=true;
+                LevelManager.instance.SetTapeSpeed(0);
+        }
+    
+        //player colliding with coin
     void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Coin")){
             SFXManager.instance.ShowCoinParticles(other.gameObject);
@@ -53,25 +64,25 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
             LevelManager.instance.IncrementCoinCount();
         }
+          
         //player losing health
         else if(other.gameObject.layer == LayerMask.NameToLayer("Enemies")) {
             AudioManager.instance.PlaySoundHealthLoss(gameObject);
-            LevelManager.instance.DecreaseHealth();
-            IEnumerator Delay(){
-            yield return new WaitForSeconds(waitTime);
-        
+            KillPlayer();
+            StopTapeAndMusic();
         }
-            if(healthValue <= 0) { 
-                Camera.main.GetComponentInChildren<AudioSource>().mute=true;
-                LevelManager.instance.SetTapeSpeed(0);
-                AudioManager.instance.PlaySoundHealthLoss(gameObject);
-                SFXManager.instance.ShowDieParticles(gameObject);
-                Destroy(gameObject);
-            }
         
-    }
+        else if(other.gameObject.CompareTag("Gift")){
+            StopTapeAndMusic();
+            AudioManager.instance.PlaySoundComplete(gameObject);
+            Destroy(gameObject);
+        
+            
+    
+
+        }
+    } 
+    
 
     
-} }
-
-
+} 
