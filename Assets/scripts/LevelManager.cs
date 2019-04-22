@@ -14,15 +14,28 @@ public class LevelManager : MonoBehaviour
     public UIcomponents uicomponents;
 
     SceneData sceneData = new SceneData();
+
     public void IncrementCoinCount()
     {
         sceneData.coinCount = sceneData.coinCount + 1;
 
     }
+    
     void DisplayHudData()
     {
         uicomponents.hud.txtCoinCount.text = "x " + sceneData.coinCount;
+        uicomponents.hud.txtHealthCount.text = "x " + sceneData.healthCount;
 
+    }
+
+    public void DecreaseHealth()
+    {
+        sceneData.healthCount = sceneData.healthCount - 1;
+
+    }
+
+    public void SetTapeSpeed(float value){ 
+        TapeSpeed = new Vector3(value, TapeSpeed.y, TapeSpeed.z);
     }
 
     void Awake(){
@@ -34,7 +47,7 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        sceneData.coinCount = 3;
     }
 
     // Update is called once per frame

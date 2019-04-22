@@ -363,6 +363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSFX:
     coinPickup: {fileID: 8300000, guid: 09e243add7eba66459c72787b0d30b49, type: 3}
+    oof: {fileID: 8300000, guid: 79bc0c36e614b6e40a05bdb5036432cc, type: 3}
 --- !u!1001 &185972166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -943,7 +944,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: x 0
+  m_Text: x 3
 --- !u!222 &610474478
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1925,11 +1926,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 435216856299090536, guid: de825fc67bf070a48bf7fe5fe4020dcd,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.66
-      objectReference: {fileID: 0}
     - target: {fileID: 435216856855553425, guid: de825fc67bf070a48bf7fe5fe4020dcd,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -1939,6 +1935,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 2.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 435216856299090536, guid: de825fc67bf070a48bf7fe5fe4020dcd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.66
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de825fc67bf070a48bf7fe5fe4020dcd, type: 3}
@@ -1954,7 +1955,7 @@ GameObject:
   - component: {fileID: 1264919840}
   - component: {fileID: 1264919839}
   m_Layer: 5
-  m_Name: CoinCount (1)
+  m_Name: HealthCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3006,6 +3007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
+  waitTime: 1
 --- !u!70 &1560192668
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3019,8 +3021,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0598166, y: -0.07959962}
-  m_Size: {x: 1.9237509, y: 1.9237509}
+  m_Offset: {x: 0.16847742, y: -0.079600036}
+  m_Size: {x: 1.1627705, y: 1.314968}
   m_Direction: 0
 --- !u!1 &1594841334
 GameObject:
@@ -3048,8 +3050,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594841334}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.14930224, y: -0.16570318, z: 0}
-  m_LocalScale: {x: 4.9824, y: 4.9824, z: 4.9824}
+  m_LocalPosition: {x: 0.26, y: -0.1, z: 0}
+  m_LocalScale: {x: 4.120445, y: 4.1901984, z: 4.9824}
   m_Children: []
   m_Father: {fileID: 1560192665}
   m_RootOrder: 0

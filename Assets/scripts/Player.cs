@@ -8,6 +8,10 @@ public class Player : MonoBehaviour
     public float speed;
     private float inputX;
     private float inputY;
+    private int healthValue;
+    public float waitTime = 1f;
+    SceneData sceneData = new SceneData();
+
     Rigidbody2D rb;
     // Start is called before the first frame update
     
@@ -15,6 +19,7 @@ public class Player : MonoBehaviour
     {
      //getting the component
      rb = GetComponent<Rigidbody2D>();
+     healthValue = sceneData.healthCount;   
 
     }
 
@@ -48,6 +53,24 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
             LevelManager.instance.IncrementCoinCount();
         }
+        //player losing health
+        else if(other.gameObject.layer == LayerMask.NameToLayer("Enemies")) {
+            AudioManager.instance.PlaySoundHealthLoss(gameObject);
+            LevelManager.instance.DecreaseHealth();
+            IEnumerator Delay(){
+            yield return new WaitForSeconds(waitTime);
+        
+        }
+            if(healthValue <= 0) { 
+                Camera.main.GetComponentInChildren<AudioSource>().mute=true;
+                LevelManager.instance.SetTapeSpeed(0);
+                AudioManager.instance.PlaySoundHealthLoss(gameObject);
+                Destroy(gameObject);
+            }
+        
     }
-}
+
+    
+} }
+
 
