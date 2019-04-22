@@ -9,6 +9,7 @@ public class SFXManager : MonoBehaviour
 
     public static SFXManager instance;
     public GameObject CoinParticles;
+    public GameObject DieParticles;
 
     void Awake()
     {
@@ -18,6 +19,12 @@ public class SFXManager : MonoBehaviour
     }
     public void ShowCoinParticles(GameObject obj){
         Instantiate(CoinParticles, obj.transform.position, Quaternion.identity);
+        
+    }
+
+    public void ShowDieParticles(GameObject obj){
+        Instantiate(DieParticles, obj.transform.position, Quaternion.identity);
+        
     }
 }
     

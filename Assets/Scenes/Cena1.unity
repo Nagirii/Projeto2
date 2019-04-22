@@ -3247,6 +3247,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinParticles: {fileID: 6100102658663651940, guid: 0f50fe5dcc7649140a1e6b7a66131666,
     type: 3}
+  DieParticles: {fileID: 2204534768099770402, guid: 87f3fd5a432acb2429b2d77b55624b4a,
+    type: 3}
 --- !u!1001 &1790418357
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3571,75 +3573,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baa08d3d79e7eab43bfa6779f7e7b06a, type: 3}
---- !u!1001 &4647864914697738341
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4647864914975482666, guid: a281ff67c08ea3340a5c4b16635bdb6b,
-        type: 3}
-      propertyPath: m_Name
-      value: ArcaneProjectile
-      objectReference: {fileID: 0}
-    - target: {fileID: 4647864914975482679, guid: a281ff67c08ea3340a5c4b16635bdb6b,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4647864914975482679, guid: a281ff67c08ea3340a5c4b16635bdb6b,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4647864914975482679, guid: a281ff67c08ea3340a5c4b16635bdb6b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4647864914975482679, guid: a281ff67c08ea3340a5c4b16635bdb6b,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4647864914975482679, guid: a281ff67c08ea3340a5c4b16635bdb6b,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4647864914975482679, guid: a281ff67c08ea3340a5c4b16635bdb6b,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4647864914975482679, guid: a281ff67c08ea3340a5c4b16635bdb6b,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4647864914975482679, guid: a281ff67c08ea3340a5c4b16635bdb6b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4647864914975482679, guid: a281ff67c08ea3340a5c4b16635bdb6b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4647864914975482679, guid: a281ff67c08ea3340a5c4b16635bdb6b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4647864914975482679, guid: a281ff67c08ea3340a5c4b16635bdb6b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a281ff67c08ea3340a5c4b16635bdb6b, type: 3}
 --- !u!1001 &7189454315317293205
 PrefabInstance:
   m_ObjectHideFlags: 0
