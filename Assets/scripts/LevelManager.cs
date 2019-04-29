@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField]
      public static LevelManager instance = null;
-    private Vector3 TapeSpeed = new Vector3 (-2f, 0f, 0f);
+    public Vector3 TapeSpeed = new Vector3 (-2f, 0f, 0f);
     [SerializeField]
     private Transform Tape = null;
 
