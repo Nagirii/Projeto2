@@ -76,7 +76,7 @@ public class Player : MonoBehaviour
             StopTapeAndMusic();
             AudioManager.instance.PlaySoundComplete(gameObject);
             Destroy(gameObject);
-        
+            LevelManager.instance.ShowLCPanel();
             
     
 

@@ -14,10 +14,20 @@ public class UIcomponents
         public Text txtHealthCount;
           [Header("Other")]
         public GameObject panelHud;
+    }
+       [Serializable]
+       public class LevelCompletePanel{ 
+        
+        [Header("Text")]
+        public Text txtScore;
+        [Header("Other")]
+        public GameObject lcpanel;
+       }
       
 
-    }
+    
     public Hud hud;
+    public LevelCompletePanel levelCompletePanel;
     
 
 }

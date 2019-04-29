@@ -57,4 +57,9 @@ public class LevelManager : MonoBehaviour
         DisplayHudData();
 
     }
+
+    public void ShowLCPanel(){
+        uicomponents.levelCompletePanel.lcpanel.SetActive(true);
+        uicomponents.levelCompletePanel.txtScore.text = "" + sceneData.coinCount;
+    }
 }
