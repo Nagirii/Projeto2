@@ -47,7 +47,8 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sceneData.coinCount = 3;
+        sceneData.coinCount = 0;
+        sceneData.healthCount = 3;
     }
 
     // Update is called once per frame
@@ -61,5 +62,10 @@ public class LevelManager : MonoBehaviour
     public void ShowLCPanel(){
         uicomponents.levelCompletePanel.lcpanel.SetActive(true);
         uicomponents.levelCompletePanel.txtScore.text = "" + sceneData.coinCount;
+    }
+
+    public void ShowGOPanel(){
+        uicomponents.gameoverpanel.gopanel.SetActive(true);
+        uicomponents.gameoverpanel.txtScore.text = "" + sceneData.coinCount;
     }
 }

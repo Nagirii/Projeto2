@@ -70,6 +70,7 @@ public class Player : MonoBehaviour
             AudioManager.instance.PlaySoundHealthLoss(gameObject);
             KillPlayer();
             StopTapeAndMusic();
+            LevelManager.instance.ShowGOPanel();
         }
         
         else if(other.gameObject.CompareTag("Gift")){
