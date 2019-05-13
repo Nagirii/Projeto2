@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
         void KillPlayer(){
             AudioManager.instance.PlaySoundHealthLoss(gameObject);
                 SFXManager.instance.ShowDieParticles(gameObject);
-                Destroy(gameObject);
+                DestroyPlayer();
         }
         void StopTapeAndMusic(){ 
              Camera.main.GetComponentInChildren<AudioSource>().mute=true;
@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
             AudioManager.instance.PlaySoundCoinPickup(other.gameObject);
             Destroy(other.gameObject);
             LevelManager.instance.IncrementCoinCount();
-            Impulse(17);
+            Impulse(10);
         }
           
         //player losing health
@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
         else if(other.gameObject.CompareTag("Gift")){
             StopTapeAndMusic();
             AudioManager.instance.PlaySoundComplete(gameObject);
-            Destroy(gameObject);
+            DestroyPlayer();
             LevelManager.instance.ShowLCPanel();
             
     
@@ -76,6 +76,10 @@ public class Player : MonoBehaviour
     void Impulse(float force){
         rb.velocity = Vector3.zero;
         rb.AddForce(Vector3.up * force, ForceMode2D.Impulse);
+    }
+    void DestroyPlayer (){
+        Camera.main.GetComponent<CameraFollow>().TurnOff();
+        Destroy(gameObject);
     }
 
     
