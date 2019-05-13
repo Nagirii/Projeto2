@@ -10,27 +10,26 @@ public class Player : MonoBehaviour
     private float inputY;
     private int healthValue;
     public float waitTime = 1f;
+    public float fallLimit = 2f;
     SceneData sceneData = new SceneData();
 
     Rigidbody2D rb;
+    Animator anim;
     // Start is called before the first frame update
     
     void Start()
     {
      //getting the component
      rb = GetComponent<Rigidbody2D>();
+     anim = GetComponent<Animator>();
      healthValue = sceneData.healthCount;   
 
     }
 
-    // Update is called once per frame
-
-    private void Update(){
-        
-    }
-    void FixedUpdate()
-    {
-        
+    void Update(){
+    if (rb.velocity.y < fallLimit){
+        anim.SetInteger("State", 0);
+      }
     }
     
     
@@ -76,6 +75,7 @@ public class Player : MonoBehaviour
     void Impulse(float force){
         rb.velocity = Vector3.zero;
         rb.AddForce(Vector3.up * force, ForceMode2D.Impulse);
+        anim.SetInteger("State", 1);
     }
     void DestroyPlayer (){
         Camera.main.GetComponent<CameraFollow>().TurnOff();
@@ -83,4 +83,5 @@ public class Player : MonoBehaviour
     }
 
     
-} 
+}
+ 
