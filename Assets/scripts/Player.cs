@@ -30,19 +30,7 @@ public class Player : MonoBehaviour
     }
     void FixedUpdate()
     {
-        //storing player input on the X axis
-        inputX = Input.GetAxisRaw("Horizontal");
-        print (inputX);
-
-        //storing player input on the Y axis
-        inputY = Input.GetAxisRaw("Vertical");
-        print (inputY);
-
-        //moving the player character on the X axis
-        rb.velocity = new Vector2(inputX * speed, rb.velocity.y);
-
-        //moving the player on the Y axis
-        rb.velocity = new Vector2(rb.velocity.x, inputY * speed);
+        
     }
     
     
@@ -63,6 +51,7 @@ public class Player : MonoBehaviour
             AudioManager.instance.PlaySoundCoinPickup(other.gameObject);
             Destroy(other.gameObject);
             LevelManager.instance.IncrementCoinCount();
+            Impulse(17);
         }
           
         //player losing health
@@ -84,6 +73,10 @@ public class Player : MonoBehaviour
         }
     } 
     
+    void Impulse(float force){
+        rb.velocity = Vector3.zero;
+        rb.AddForce(Vector3.up * force, ForceMode2D.Impulse);
+    }
 
     
 } 
